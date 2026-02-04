@@ -49,6 +49,16 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
+    /* Momentum scrolling for iOS */
+}
+
+/* Ensure smooth scrolling across the entire document */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 a {
@@ -663,6 +673,9 @@ footer {
 
     body.menu-open {
         overflow: hidden;
+        position: fixed;
+        /* Prevent background scroll on iOS */
+        width: 100%;
     }
 
     body.menu-open::before {
